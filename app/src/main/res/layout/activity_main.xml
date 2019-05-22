@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/namn"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:hint="@string/namn_valfritt"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/volymICLText"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/volymICLText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/volym_i_cl"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/volym"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/volym"
+        android:layout_width="135dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/volym"
+        android:importantForAutofill="no"
+        android:inputType="number|textPersonName|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/alkoholprocentText"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/pristext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:text="Pris:"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/pris"
+        app:layout_constraintStart_toEndOf="@+id/volymICLText" />
+
+    <EditText
+        android:id="@+id/pris"
+        android:layout_width="139dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/pris"
+        android:importantForAutofill="no"
+        android:inputType="number|textPersonName|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/apkText"
+        app:layout_constraintStart_toEndOf="@+id/volym"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/alkoholprocentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/alkoholprocent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/alkoholprocent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/alkoholprocent"
+        android:layout_width="164dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/alkohol"
+        android:importantForAutofill="no"
+        android:inputType="number|textPersonName|numberDecimal"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/rakna"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:targetApi="o" />
+
+    <TextView
+        android:id="@+id/apkText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:text="@string/apk_ml_kr"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/apk"
+        app:layout_constraintStart_toEndOf="@+id/alkoholprocentText" />
+
+    <EditText
+        android:id="@+id/apk"
+        android:layout_width="111dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/apk_ml_kr"
+        android:importantForAutofill="no"
+        android:inputType="number|textPersonName|numberDecimal|none"
+        app:layout_constraintBottom_toTopOf="@+id/clear"
+        app:layout_constraintStart_toEndOf="@+id/alkoholprocent"
+        tools:targetApi="o" />
+
+    <Button
+        android:id="@+id/rakna"
+        android:layout_width="128dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/r_kna"
+        app:layout_constraintBottom_toTopOf="@+id/addtolist"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="128dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toTopOf="@+id/secondactivity"
+        app:layout_constraintStart_toEndOf="@+id/rakna" />
+
+    <Button
+        android:id="@+id/secondactivity"
+        android:layout_width="128dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/g_till_listan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/addtolist"
+        android:layout_width="128dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/l_gg_till_i_listan"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/namn_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="12dp"
+        android:text="Namn: (valfritt)"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/namn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
