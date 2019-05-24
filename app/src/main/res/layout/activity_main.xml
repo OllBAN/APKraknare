@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/red">
 
     <EditText
         android:id="@+id/namn"
@@ -128,8 +129,10 @@
         android:layout_marginStart="44dp"
         android:layout_marginBottom="32dp"
         android:text="@string/r_kna"
+        android:theme="@style/AppTheme"
         app:layout_constraintBottom_toTopOf="@+id/addtolist"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_drawable"/>
 
     <Button
         android:id="@+id/clear"
@@ -139,7 +142,9 @@
         android:layout_marginBottom="32dp"
         android:text="@string/clear"
         app:layout_constraintBottom_toTopOf="@+id/secondactivity"
-        app:layout_constraintStart_toEndOf="@+id/rakna" />
+        app:layout_constraintStart_toEndOf="@+id/rakna"
+        android:background="@drawable/button_drawable"/>
+    />
 
     <Button
         android:id="@+id/secondactivity"
@@ -149,7 +154,8 @@
         android:layout_marginBottom="16dp"
         android:text="@string/g_till_listan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/button_drawable"/>
 
     <Button
         android:id="@+id/addtolist"
@@ -159,7 +165,9 @@
         android:layout_marginBottom="16dp"
         android:text="@string/l_gg_till_i_listan"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/button_drawable"/>
+
 
     <TextView
         android:id="@+id/namn_text"
